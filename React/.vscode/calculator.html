@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web lab 6</title>
+    </head>
+    <body>
+        <h1 style="background-color:cyan;">Calculator</h1>
+        <table>
+            <td>
+                <th>
+                    
+                </th>
+                <tr>
+                    <button class="btn btn-primary" onclick="Add">  +  </button>
+                    <button class="btn btn-primary" onclick="Sub">  -  </button>
+                    <button class="btn btn-primary" onclick="Mul">  *  </button>
+                    <button class="btn btn-primary" onclick="Div">  /  </button>
+                    <button class="btn btn-primary" onclick="Res">  =  </button>
+                </tr>
+                
+            </td>
+        </table>
+        <script>
+            function Add(){
+                let a = prompt("Enter 1st Number : ");
+                let b =prompt("Enter 2nd Number : ");
+                return a+b;
+            }
+            function Sub(){
+                let a = prompt("Enter 1st Number : ");
+                let b =prompt("Enter 2nd Number : ");
+                return a-b;
+            }
+            function Mul(){
+                let a = prompt("Enter 1st Number : ");
+                let b =prompt("Enter 2nd Number : ");
+                return a*b;
+            }
+            function Div(){
+                let a = prompt("Enter 1st Number : ");
+                let b =prompt("Enter 2nd Number : ");
+                return a/b;
+            }
+            function Res(){
+                
+                return 'Result =';
+            }
+        </script>
+    </body>
+</html>

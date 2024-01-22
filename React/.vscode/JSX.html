@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Todo List Web App</title>
+</head>
+
+<body style="background-color: rgb(192, 149, 84);">
+    <h1>TO DO LIST</h1>
+    <div class="container">
+        <textarea className="form-control" value = {text} onChange={handleonchange} id="taskInput" rows="8">Text Here</textarea>
+    </div>
+    <div class="container">
+        <button onclick="addItem()">Add Item</button>
+        <button onclick="removeItem()">Remove Item</button>
+        <ul id="taskList"></ul>
+    </div>
+
+    <script>
+        let tasks = [];
+
+        function addItem() {
+            let taskInput = document.getElementById("taskInput");
+            let taskList = document.getElementById("taskList");
+
+            let task = taskInput.value;
+            if (task.trim() !== "") {
+                tasks.push(task);
+
+                // Add task to the list
+                let listItem = document.createElement("li");
+                listItem.appendChild(document.createTextNode(task));
+                taskList.appendChild(listItem);
+
+                // Clear the input field
+                taskInput.value = "";
+            }
+        }
+
+        function removeItem() {
+            let taskList = document.getElementById("taskList");
+            // Remove the last task
+            if (tasks.length > 0) {
+                tasks.pop();
+                taskList.removeChild(taskList.lastChild);
+            }
+        }
+    </script>
+</body>
+
+</html>
