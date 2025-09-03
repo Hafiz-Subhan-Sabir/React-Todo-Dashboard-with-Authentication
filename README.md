@@ -1,69 +1,67 @@
-# React + TypeScript + Vite
+eact Todo Dashboard with Authentication
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple **React + TypeScript + Tailwind CSS** project featuring:
 
-Currently, two official plugins are available:
+- 🔐 Login authentication (with context API)
+- 🛡️ Protected routes using React Router
+- ✅ A Todo Dashboard (Add, Delete, Edit todos)
+- 🎨 Styled with Tailwind CSS + shadcn/ui
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🚀 Getting Started
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1. Clone the repository
+```bash
+git clone https://github.com/Hafiz-Subhan-Sabir/React-Todo-Dashboard-with-Authentication.git
+cd React-Todo-Dashboard-with-Authentication
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+2. Install dependencies
+npm install
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+3. Start the development server
+npm run dev
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+📂 Project Structure
+src/
+ ├── components/      # Reusable components (Navbar, Footer, etc.)
+ ├── context/         # Auth Context
+ ├── layout/          # Layout with Outlet + ProtectedRoute
+ ├── pages/           # Login, Todo Dashboard
+ └── data/            # Dummy users for login
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+✨ Features
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+User login with validation
+
+Protected routes (only logged-in users can see dashboard)
+
+Add / Delete / Edit todos
+
+Responsive UI with Tailwind & shadcn
+
+📸 Screenshots 
+
+Login Page
+<img width="490" height="448" alt="image" src="https://github.com/user-attachments/assets/cd52fe25-d36f-492d-a232-791edabf88a2" />
+
+
+Dashboard with Todos
+<img width="1031" height="615" alt="image" src="https://github.com/user-attachments/assets/2f8e00a5-63da-4b1a-8448-0b9ac4caced0" />
+
+
+🛠️ Tech Stack
+
+React + TypeScript
+
+React Router
+
+Context API
+
+Tailwind CSS
+
+shadcn/ui
+
+📜 License
+
+This project is licensed under the MIT License.
